@@ -74,12 +74,16 @@ My final model consisted of the following layers:
 | RELU					|												|
 | Max pooling	      	| 2x2 stride,  outputs = 14x14x6 				|
 | Convolution 3x3	    | 1x1 stride, valid padding, 10x10x16 |
-| Fully connected		| etc.        									|
-| Softmax				| etc.        									|
-|						|												|
-|						|												|
+| RELU     |            |
+| Max pooling	      	| 2x2 stride,  outputs = 5x5x16 				|
+| Flatten  | Output = 400 |
+| Fully connected		| Output = 120          									|
+| RELU     |            |
+| Fully connected		| Output = 84          									|
+| RELU     |            |
+| Fully connected		| Output = 10          									|
+| Softmax				| Softmax_cross_entropy_with_logits        									|
  
-
 
 #### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
